@@ -1,0 +1,12 @@
+Package: nationallakes
+Title: Data from the National Lakes Assessment (NLA)
+Version: 0.0.0.9000
+Authors@R: person("Cory", "Sauve", email = "coryjsauve@gmail.com",
+                  role = c("aut", "cre"))
+Description: This package provides data from the U.S. EPA National Lakes Assessment (NLA)
+  in tidy format. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
