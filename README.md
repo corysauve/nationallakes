@@ -8,8 +8,20 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-Explore U.S. EPA National Lakes Assessment (NLA) data in an R friendly
-format.
+Explore U.S. EPA [National Lakes Assessment
+(NLA)](https://www.epa.gov/national-aquatic-resource-surveys/nla) data
+in an R (and people) friendly format. **I’m still adding indicators so
+check back later for the complete data!**
+
+Some notable differences from the raw data:
+
+-   snake\_case column names
+-   Available years are combined into a single data frame. If a variable
+    is missing for a year, it is noted by `Not included in {Year}`
+    rather than with `NA`
+
+If you’re after the *raw* date, check out the
+[narsscrapr](https://github.com/corysauve/narsscrapr) package.
 
 ## Basic Usage
 
@@ -22,8 +34,8 @@ Available indicators include:
 
     #> [1] "algal_toxins"
 
-All available indicator data is loaded when nationallakes is loaded. To
-access a particular dataset, simply access it via it’s name:
+All indicator data are available when nationallakes is loaded. To access
+a particular dataset, simply access it via it’s name:
 
 ``` r
 library(nationallakes)
