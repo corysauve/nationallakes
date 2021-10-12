@@ -19,7 +19,25 @@ knitr::opts_chunk$set(
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-Data from the U.S. EPA National Lakes Assessment in tidy format. 
+Explore U.S. EPA National Lakes Assessment (NLA) data in an R friendly format.   
+
+## Basic Usage 
+
+nationallakes contains survey data organized by *Indicator* and `survey_year`. NLA survey years are 2007, 2012, and 2017. However, not all indicators were collected in every survey and only partial results are currently available for 2017.
+
+Available indicators include:
+```{r echo=FALSE}
+data <- data(package = "nationallakes")$result[, "Item"]
+unname(data)
+```
+
+All available indicator data is loaded when nationallakes is called To access a particular dataset, simply type it's name: 
+```{r}
+library(nationallakes)
+
+dplyr::glimpse(algal_toxins)
+```
+
 
 ## Installation
 
@@ -38,7 +56,6 @@ I welcome any contributions or suggestions for improving this package! Please op
 
 The nationallakes package is licensed under the MIT License. Please see the [LICENSE](LICENSE.md) for more details.
 
+## Acknowledgments 
 
-
-
-
+The National Lakes Assessment Data (2007, 2012, 2017) data were a result of the collective efforts of dedicated field crews, laboratory staff, data management and quality control staff, analysts and many others from EPA, states, tribes, federal agencies, universities, and other organizations. Please contact nars-hq@epa.gov with any questions.
