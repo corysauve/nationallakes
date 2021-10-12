@@ -18,6 +18,6 @@ A data frame with 27 variables: \code{survey_year}, \code{publication_date},
 algal_toxins
 }
 \description{
-A dataset containing algal toxin data collected by the National Lakes Assessment.
+A dataset containing algal toxin data
 }
 \keyword{datasets}
