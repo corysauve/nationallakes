@@ -23,7 +23,7 @@ Explore U.S. EPA [National Lakes Assessment (NLA)](https://www.epa.gov/national-
 
 Some notable differences from the raw data: 
 
-* snake_case column names
+* snake_case column names with some name changes for clarity.
 * Available years are combined into a single data frame. If a variable is missing for a year, it is noted by `Not included in {Year}` rather than with `NA`
 
 If you're after the *raw* date, check out the [narsscrapr](https://github.com/corysauve/narsscrapr) package.

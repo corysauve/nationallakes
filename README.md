@@ -15,7 +15,7 @@ check back later for the complete data!**
 
 Some notable differences from the raw data:
 
--   snake\_case column names
+-   snake\_case column names with some name changes for clarity.
 -   Available years are combined into a single data frame. If a variable
     is missing for a year, it is noted by `Not included in {Year}`
     rather than with `NA`
@@ -32,7 +32,7 @@ partial results are currently available for 2017.
 
 Available indicators include:
 
-    #> [1] "algal_toxins"
+    #> [1] "algal_toxins"   "benthic_counts"
 
 All indicator data are available when nationallakes is loaded. To access
 a particular dataset, simply access it via it’s name:
