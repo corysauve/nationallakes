@@ -14,16 +14,16 @@ format.
 ## Basic Usage
 
 nationallakes contains survey data organized by *Indicator* and
-`survey_year`. NLA survey years are 2007, 2012, and 2017. However, not
-all indicators were collected in every survey and only partial results
-are currently available for 2017.
+`survey_year`. Available survey years include 2007, 2012, and 2017.
+However, not all indicators were collected in every survey and only
+partial results are currently available for 2017.
 
 Available indicators include:
 
     #> [1] "algal_toxins"
 
-All available indicator data is loaded when nationallakes is called To
-access a particular dataset, simply type it’s name:
+All available indicator data is loaded when nationallakes is loaded. To
+access a particular dataset, simply access it via it’s name:
 
 ``` r
 library(nationallakes)
