@@ -5,7 +5,7 @@
 \alias{benthic_counts}
 \title{Benthic counts}
 \format{
-A data frame with 26 variables: \code{year}, \code{unique_id}, \code{site_id},
+A data frame with 26 variables: \code{survey_year}, \code{unique_id}, \code{site_id},
 \code{aggr_eco3_2015}, \code{aggr_eco9_2015}, \code{state}, \code{eco_bio}, \code{visit_number},
 \code{date_collected}, \code{taxa_id}, \code{target_taxon}, \code{non_target},
 \code{total_300}, \code{is_distinct}, \code{is_distinct_300}, \code{phylum},
