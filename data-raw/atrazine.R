@@ -3,26 +3,17 @@ atrazine_2017 <- scrape_nars("NLA", 2017, "Atrazine")
 
 atrazine_2012_clean <- atrazine_2012 %>%
   janitor::clean_names() %>%
-  dplyr::rename(date_collected = date_col, atrazine_ppb = atrazine_result,
-         flag = atrazine_flag, date_analyzed = atrazine_date_analyzed,
-         date_received = atrazine_date_received, batch_id = atrazine_batch_id,
-         mdl_ppb = atrazine_mdl, qa_flag = atrazine_qa_flag, holding_time_days = atrazine_holding_time,
-         limit_of_quantitation_ppb = atrazine_loq, units = atrazine_units,
-         unique_id = uid, bioregions = eco_bio, sample_id = tria_sample_id, visit_number = visit_no) %>%
   dplyr::mutate(publication_date = lubridate::mdy(publication_date),
-         date_collected = lubridate::mdy(date_collected),
-         date_received = lubridate::mdy(date_received),
-         date_analyzed = lubridate::mdy(date_analyzed))
+                date_col = lubridate::mdy(date_col),
+                atrazine_date_received = lubridate::mdy(atrazine_date_received),
+                atrazine_date_analyzed = lubridate::mdy(atrazine_date_analyzed))
 
 atrazine_2017_clean <- atrazine_2017 %>%
   janitor::clean_names() %>%
-  dplyr::rename(date_collected = date_col, analysis_material = matrix,
-         mdl_ppb = mdl, reporting_limit = rl, sample_code = sam_code,
-         unqiue_id = uid, visit_number = visit_no) %>%
-  dplyr::mutate(date_collected = lubridate::dmy(date_collected),
-         date_received = lubridate::dmy(date_received),
-         date_analyzed = lubridate::dmy(date_analyzed),
-         publication_date = lubridate::mdy(publication_date))
+  dplyr::mutate(date_col = lubridate::dmy(date_col),
+                date_received = lubridate::dmy(date_received),
+                date_analyzed = lubridate::dmy(date_analyzed),
+                publication_date = lubridate::mdy(publication_date))
 
 
 atrazine <- list("2012" = atrazine_2012_clean,
