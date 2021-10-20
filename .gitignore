@@ -3,3 +3,7 @@
 .RData
 .Ruserdata
 dev/
+nationallakes.Rcheck/
+nationallakes*.tar.gz
+nationallakes*.tgz
+inst/doc
