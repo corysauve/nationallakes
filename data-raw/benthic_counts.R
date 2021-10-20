@@ -4,24 +4,24 @@ benthic_count_2017 <- scrape_nars("NLA", 2017, "Benthic Count")
 
 benthic_count_2007_clean <- benthic_count_2007 %>%
   janitor::clean_names() %>%
-  mutate(publication_date = mdy(publication_date),
-         date_col = mdy(date_col)) %>%
-  rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
+  dplyr::mutate(publication_date = lubridate::mdy(publication_date),
+         date_col = lubridate::mdy(date_col)) %>%
+  dplyr::rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
          functional_feeding_group = ffg, pollution_tolerance_value = ptv)
 
 benthic_count_2012_clean <- benthic_count_2012 %>%
   janitor::clean_names() %>%
-  mutate(publication_date = mdy(publication_date),
-         date_col = mdy(date_col)) %>%
-  rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
+  dplyr::mutate(publication_date = lubridate::mdy(publication_date),
+         date_col = lubridate::mdy(date_col)) %>%
+  dplyr::rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
          functional_feeding_group = ffg, pollution_tolerance_value = ptv)
 
 benthic_count_2017_clean <- benthic_count_2017 %>%
   janitor::clean_names() %>%
-  mutate(publication_date = mdy(publication_date),
-         date_col = dmy(date_col),
+  dplyr::mutate(publication_date = lubridate::mdy(publication_date),
+         date_col = lubridate::dmy(date_col),
          is_distinct = as.character(is_distinct)) %>%
-  rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
+  dplyr::rename(unique_id = uid, date_collected = date_col, visit_number = visit_no,
          functional_feeding_group = ffg, pollution_tolerance_value = ptv)
 
 benthic_counts <- list("2007" = benthic_count_2007_clean,
