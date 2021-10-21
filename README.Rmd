@@ -42,7 +42,7 @@ All indicator data are available when nationallakes is loaded. To access a parti
 ```{r}
 library(nationallakes)
 
-dplyr::glimpse(algal_toxins)
+dplyr::glimpse(algal_toxins$`2017`)
 ```
 
 ## Installation
