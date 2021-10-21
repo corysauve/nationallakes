@@ -1,5 +1,5 @@
-atrazine_2012 <- scrape_nars("NLA", 2012, "Atrazine")
-atrazine_2017 <- scrape_nars("NLA", 2017, "Atrazine")
+atrazine_2012 <- narsscrapr::scrape_nars("NLA", 2012, "Atrazine")
+atrazine_2017 <- narsscrapr::scrape_nars("NLA", 2017, "Atrazine")
 
 atrazine_2012_clean <- atrazine_2012 %>%
   janitor::clean_names() %>%

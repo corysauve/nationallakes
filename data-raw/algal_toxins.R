@@ -1,4 +1,4 @@
-algal_toxins_2017 <- scrape_nars("NLA", 2017, "Algal Toxin")
+algal_toxins_2017 <- narsscrapr::scrape_nars("NLA", 2017, "Algal Toxin")
 
 algal_toxins <- algal_toxins_2017 %>%
   janitor::clean_names() %>%

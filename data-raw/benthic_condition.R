@@ -1,5 +1,5 @@
-benthic_condition_2007 <- scrape_nars("NLA", 2007, "Benthic Condition")
-benthic_condition_2012 <- scrape_nars("NLA", 2012, "Benthic Condition")
+benthic_condition_2007 <- narsscrapr::scrape_nars("NLA", 2007, "Benthic Condition")
+benthic_condition_2012 <- narsscrapr::scrape_nars("NLA", 2012, "Benthic Condition")
 
 benthic_condition_2007_clean <- benthic_condition_2007 %>%
   janitor::clean_names() %>%

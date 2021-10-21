@@ -1,6 +1,6 @@
-benthic_metrics_2007 <- scrape_nars("NLA", 2007, "Benthic Metrics")
-benthic_metrics_2012 <- scrape_nars("NLA", 2012, "Benthic Metrics")
-benthic_metrics_2017 <- scrape_nars("NLA", 2017, "Benthic Metrics")
+benthic_metrics_2007 <- narsscrapr::scrape_nars("NLA", 2007, "Benthic Metrics")
+benthic_metrics_2012 <- narsscrapr::scrape_nars("NLA", 2012, "Benthic Metrics")
+benthic_metrics_2017 <- narsscrapr::scrape_nars("NLA", 2017, "Benthic Metrics")
 
 benthic_metrics_2007_clean <- benthic_metrics_2007 %>%
   janitor::clean_names() %>%
