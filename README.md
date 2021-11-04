@@ -16,9 +16,7 @@ check back later for the complete data!**
 Some notable differences from the raw data:
 
 -   snake\_case column names with some name changes for clarity.
--   Available years are combined into a single data frame. If a variable
-    is missing for a year, it is noted by `Not included in {Year}`
-    rather than with `NA`
+-   Formatted dates
 
 If you’re after the *raw* date, check out the
 [narsscrapr](https://github.com/corysauve/narsscrapr) package.
@@ -32,10 +30,13 @@ partial results are currently available for 2017.
 
 Available indicators include:
 
-    #>  [1] "algal_toxins"         "atrazine"             "benthic_condition"   
-    #>  [4] "benthic_counts"       "benthic_metrics"      "benthic_taxa"        
-    #>  [7] "chla"                 "ecoli"                "hydrographic_profile"
-    #> [10] "mean_do"              "mean_do_condition"
+    #>  [1] "algal_toxins"           "atrazine"               "basin_landuse_metrics" 
+    #>  [4] "benthic_condition"      "benthic_counts"         "benthic_metrics"       
+    #>  [7] "benthic_taxa"           "buffer_landuse_metrics" "chla"                  
+    #> [10] "ecoli"                  "hydrographic_profile"   "mean_do"               
+    #> [13] "mean_do_condition"      "phab_data"              "phab_metrics"          
+    #> [16] "phyt_counts"            "phyt_sample_info"       "phyt_taxa"             
+    #> [19] "plankton_models"        "watershed_variables"
 
 All indicator data are available when nationallakes is loaded. To access
 a particular dataset, simply access it via it’s name:
