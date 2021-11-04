@@ -18,7 +18,7 @@ Some notable differences from the raw data:
 -   snake\_case column names with some name changes for clarity.
 -   Formatted dates
 
-If you’re after the *raw* date, check out the
+If you’re after the *raw* data, check out the
 [narsscrapr](https://github.com/corysauve/narsscrapr) package.
 
 ## Basic Usage
